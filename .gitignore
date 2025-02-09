@@ -1,0 +1,10 @@
+#python
+__pycache__/
+
+# virtualenv
+env/
+
+# pyinstaller
+build/
+dist/
+*.spec
