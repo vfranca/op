@@ -1,17 +1,17 @@
 """
-Aplicativo CLI para calcular valor do contrato por diferença
+Calcula valor do contrato por diferença
 """
 
 import click
 
 
 @click.command()
-@click.argument("tamanho-contrato", type=float)
-@click.argument("volume_minimo", type=float)
-@click.argument("range", type=float)
-def cfd(tamanho_contrato, volume_minimo, range):
+@click.argument("range", type=float, envvar="R")
+@click.argument("volume", type=float, envvar="LOT")
+@click.option("--tamanho","-t",  type=float, envvar="TAM", default=100000)
+def cfd(range, volume, tamanho):
     """Calcula o contrato por diferenca"""
-    cfd = range * volume_minimo * tamanho_contrato
+    cfd = range * volume * tamanho
     click.echo("%.2f" % cfd)
 
 
