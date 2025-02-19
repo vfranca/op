@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "op"
+version = "0.1.0"
+description = "Aplicativo CLI para cálculos envolvendo operações de trading"
+authors = ["Valmir França <vfranca3@gmail.com>"]
+license = "BSD-3-Clause"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-env = "^1.1.5"
+
+[tool.poetry.scripts]
+op = "op.op:op"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

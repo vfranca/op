@@ -1,5 +1,5 @@
 from click.testing import CliRunner
-from op import op
+from op.op import op
 
 
 run = CliRunner()
