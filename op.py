@@ -3,12 +3,12 @@ Aplicativo CLI para cálculos em operações de mercado
 """
 
 import click
-from op.em import em
-from op.pt import pt
-from op.cfd import cfd
-from op.mg import mg
-from op.sw import sw
-from op.pm import pm
+from em import em
+from pt import pt
+from cfd import cfd
+from mg import mg
+from sw import sw
+from pm import pm
 
 
 @click.group()
