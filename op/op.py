@@ -9,6 +9,7 @@ from op.cfd import cfd
 from op.mg import mg
 from op.sw import sw
 from op.pm import pm
+from op.e import e
 
 
 @click.group()
@@ -23,6 +24,7 @@ op.add_command(cfd)
 op.add_command(mg)
 op.add_command(sw)
 op.add_command(pm)
+op.add_command(e)
 
 
 if __name__ == "__main__":
