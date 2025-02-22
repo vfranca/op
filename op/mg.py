@@ -6,7 +6,13 @@ import click
 @click.argument("preco", type=float)
 @click.argument("tamanho", type=float)
 @click.argument("volume", type=float)
-@click.option("--alavancagem", "-a", type=int, default=200)
+@click.option(
+    "--alavancagem",
+    "-a",
+    type=int,
+    default=200,
+    help="Alavancagem permitida pela corretora",
+)
 def mg(preco, tamanho, volume, alavancagem):
     """Calcula a margem de garantia"""
     margem = (preco * tamanho * volume) / alavancagem

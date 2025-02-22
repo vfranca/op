@@ -12,8 +12,12 @@ swv = getenv("swv")
 
 @click.command()
 @click.argument("volume", type=float)
-@click.option("--compra", "-c", type=float, default=swc)
-@click.option("--venda", "-v", type=float, default=swv)
+@click.option(
+    "--compra", "-c", type=float, default=swc, help="Taxa de swap para posicao long"
+)
+@click.option(
+    "--venda", "-v", type=float, default=swv, help="Taxa de swap para posicao short"
+)
 def sw(volume, compra, venda):
     """Calcula o swap"""
     swap_compra = volume * compra
