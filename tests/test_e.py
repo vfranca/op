@@ -10,5 +10,5 @@ def test_calcula_uma_compra():
 
 
 def test_calcula_uma_venda():
-    res = run.invoke(op, ["e", "130200", "-r", "100", "-rr", "2", "-t", "v"])
+    res = run.invoke(op, ["e", "130200", "-r", "100", "-rr", "2", "--venda"])
     assert res.output == "130000 2X\n130100 1X\n130200 E\n130300 SL\n"

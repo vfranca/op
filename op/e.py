@@ -6,11 +6,30 @@ import click
 
 
 @click.command()
-@click.argument("entrada", type=float)
-@click.option("--risco", "-r", type=float)
-@click.option("--retorno", "-rr", type=int)
-@click.option("--digitos", "-d", type=int, default=0)
-@click.option("--tipo", "-t", default="c")
+@click.argument("entrada", type=float, envvar="E")
+@click.option(
+    "--risco", "-r", type=float, envvar="R", help="Risco da operacao em pontos"
+)
+@click.option(
+    "--retorno",
+    "-rr",
+    type=int,
+    default=2,
+    envvar="RR",
+    help="Risco/retorno da operacao",
+)
+@click.option(
+    "--digitos",
+    "-d",
+    type=int,
+    default=0,
+    envvar="DIGITOS",
+    help="Digitos depois do separador decimal",
+)
+@click.option(
+    "--compra", "-c", "tipo", flag_value="c", default=True, help="Operacao de compra"
+)
+@click.option("--venda", "-v", "tipo", flag_value="v", help="Operacao de venda")
 def e(entrada, risco, retorno, digitos, tipo):
     """Calcula operacao de trading"""
     if tipo == "v":
