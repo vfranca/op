@@ -1,11 +1,15 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+included_files = [
+    ("README.md", "."),
+    ("LICENSE", ".")
+]
 
 a = Analysis(
     ['op\\op.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=included_files,
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
