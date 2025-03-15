@@ -50,7 +50,7 @@ def c(saldo, risco, meta, drawdown_maximo, drawdown_diario):
     # Meta de ganho
     m = saldo * (meta / 100)
     click.echo("saldo da conta %.2f" % saldo)
-    click.echo("meta %.2f (%i%%)" % (m, meta))
+    click.echo("meta %.2f %i%%" % (m, meta))
     click.echo("risco por operacao %.2f %.1f%%" % (r, risco))
     click.echo("drawdown maximo %.2f %i%%" % (dm, drawdown_maximo))
     click.echo("drawdown diario %.2f %i%%" % (dd, drawdown_diario))
