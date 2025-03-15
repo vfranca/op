@@ -12,7 +12,7 @@ import click
     "-r",
     type=float,
     default=1,
-    envvar="R",
+    envvar="RISCO",
     help="Risco por operacao, em porcentagem, default 1.",
 )
 @click.option(
