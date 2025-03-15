@@ -4,7 +4,7 @@ Aplicativo CLI para cálculos em operações de mercado
 
 import click
 from op.em import em
-from op.pt import pt
+from op.c import c
 from op.cfd import cfd
 from op.mg import mg
 from op.sw import sw
@@ -19,7 +19,7 @@ def op():
 
 
 op.add_command(em)
-op.add_command(pt)
+op.add_command(c)
 op.add_command(cfd)
 op.add_command(mg)
 op.add_command(sw)
