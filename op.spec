@@ -1,8 +1,9 @@
 # -*- mode: python ; coding: utf-8 -*-
+VERSION='0.1.0'
 
 included_files = [
-    ("README.md", "."),
-    ("LICENSE", ".")
+    ('README.md', '.'),
+    ('LICENSE', '.')
 ]
 
 a = Analysis(
@@ -44,5 +45,5 @@ coll = COLLECT(
     strip=False,
     upx=True,
     upx_exclude=[],
-    name='op',
+    name='op-'+VERSION,
 )

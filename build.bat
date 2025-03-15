@@ -1,1 +1,1 @@
-@pyinstaller -y op.spec
+@pyinstaller --distpath dist/pyinstaller -y op.spec
