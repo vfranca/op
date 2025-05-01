@@ -2,9 +2,9 @@
 Calcula o swap
 """
 
-import click
 from os import getenv
 
+import click
 
 swc = getenv("swc")
 swv = getenv("swv")

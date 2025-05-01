@@ -1,14 +1,15 @@
 """Aplicativo CLI para cálculos em operações de mercado."""
 
 import click
-from op.em import em
+
 from op.c import c
 from op.cfd import cfd
-from op.mg import mg
-from op.sw import sw
-from op.pm import pm
 from op.e import e
+from op.em import em
 from op.h import h
+from op.mg import mg
+from op.pm import pm
+from op.sw import sw
 
 
 @click.group()
