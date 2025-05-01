@@ -1,6 +1,4 @@
-"""
-Aplicativo CLI para cálculos em operações de mercado
-"""
+"""Aplicativo CLI para cálculos em operações de mercado."""
 
 import click
 from op.em import em
@@ -10,6 +8,7 @@ from op.mg import mg
 from op.sw import sw
 from op.pm import pm
 from op.e import e
+from op.h import h
 
 
 @click.group()
@@ -25,6 +24,7 @@ op.add_command(mg)
 op.add_command(sw)
 op.add_command(pm)
 op.add_command(e)
+op.add_command(h)
 
 
 if __name__ == "__main__":
