@@ -1,6 +1,4 @@
-"""
-Calcula uma operação de trading
-"""
+"""Calcula uma operação de trading."""
 
 import click
 
@@ -30,16 +28,10 @@ import click
     "--compra", "-c", "tipo", flag_value="c", default=True, help="Operacao de compra"
 )
 @click.option("--venda", "-v", "tipo", flag_value="v", help="Operacao de venda")
-@click.option(
-    "--target", "-tg", type=float, envvar="TG", default=0, help="Alvo da operação"
-)
-def e(entrada, risco, retorno, digitos, tipo, target):
-    """Calcula operacao de trading"""
+def e(entrada, risco, retorno, digitos, tipo):
+    """Calcula operacao de trading."""
     if tipo == "v":
         entrada = -entrada  # somente para operação de venda
-    if target:
-        target_pontos = abs(target - entrada)
-        click.echo("%.{0}f/%.{0}f target".format(digitos) % (target, target_pontos))
     sl = entrada - risco  # stop loss
     targets = []
     for rr in range(retorno):
