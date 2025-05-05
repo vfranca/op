@@ -14,7 +14,7 @@ from op.sw import sw
 
 @click.group()
 def op():
-    """Calculos para operacoes de trading"""
+    """Calculos para operacoes de trading."""
     pass
 
 

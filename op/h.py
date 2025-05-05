@@ -1,4 +1,4 @@
-"""Calcula o horário das barras."""
+"""Comando para calcular o horário das barras."""
 
 import click
 

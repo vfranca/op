@@ -1,6 +1,4 @@
-"""
-Calcula uma conta de trading
-"""
+"""Comando para cálculo de uma conta de trading."""
 
 import click
 

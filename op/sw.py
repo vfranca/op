@@ -1,6 +1,4 @@
-"""
-Calcula o swap
-"""
+"""Comando para calcular o swap."""
 
 from os import getenv
 
@@ -19,7 +17,7 @@ swv = getenv("swv")
     "--venda", "-v", type=float, default=swv, help="Taxa de swap para posicao short"
 )
 def sw(volume, compra, venda):
-    """Calcula o swap"""
+    """Calcula o swap."""
     swap_compra = volume * compra
     swap_venda = volume * venda
     click.echo("swap de compra %.2f" % swap_compra)

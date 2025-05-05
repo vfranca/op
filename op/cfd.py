@@ -1,6 +1,4 @@
-"""
-Calcula valor do contrato por diferença
-"""
+"""Comando para calcular o valor do contrato por diferença."""
 
 import click
 
@@ -17,7 +15,7 @@ import click
     help="Tamanho do contrato",
 )
 def cfd(pontos, volume, tamanho):
-    """Calcula o contrato por diferenca"""
+    """Calcula o contrato por diferenca."""
     cfd = pontos * volume * tamanho
     click.echo("%.2f" % cfd)
 

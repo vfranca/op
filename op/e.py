@@ -1,4 +1,4 @@
-"""Calcula uma operação de trading."""
+"""Comando para calcular uma operação de trading."""
 
 import click
 

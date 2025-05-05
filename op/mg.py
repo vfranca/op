@@ -1,4 +1,5 @@
-# calcula a margem de garantia
+"""Comando para calcular a margem de garantia."""
+
 import click
 
 
@@ -14,7 +15,7 @@ import click
     help="Alavancagem permitida pela corretora",
 )
 def mg(preco, tamanho, volume, alavancagem):
-    """Calcula a margem de garantia"""
+    """Calcula a margem de garantia."""
     margem = (preco * tamanho * volume) / alavancagem
     click.echo("%.2f" % margem)
 

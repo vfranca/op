@@ -1,6 +1,4 @@
-"""
-Aplicativo CLI para calcular o preço médio
-"""
+"""Comando para calcular o preço médio."""
 
 import click
 
@@ -20,7 +18,7 @@ import click
     help="Digito da moeda, default 2.",
 )
 def pm(e1, e2, e3, e4, e5, digitos):
-    """Calcula o preco medio"""
+    """Calcula o preco medio."""
     medio = e1
     if e2:
         medio = (e1 + e2) / 2
