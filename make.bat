@@ -1,6 +1,7 @@
 @echo off
 set version=0.1.0
 set dist=op
+set distpath=dist\pyinstaller
 
 if /i "%1" == "build" (
 goto :build
@@ -15,21 +16,18 @@ goto :eof
 :build
 set readme=readme.md
 set license=LICENSE
-set buildpath=build\
-set distpath=dist\pyinstaller\%dist%-%version%\
 set fzip=%dist%-%version%.zip
-pyinstaller --distpath dist/pyinstaller -y op.spec
-copy %readme% %distpath%%readme%
-copy %license% %distpath%%license%
-cd %distpath%
+pyinstaller --distpath %distpath% -y %dist%.spec
+copy %readme% %distpath%\%dist%-%version%\%readme%
+copy %license% %distpath%\%dist%-%version%\%license%
+cd %distpath%\%dist%-%version%
 call zip -r %fzip% *.*
 move %fzip% ..\%fzip%
 cd ..\..\..
-rd /s /q %distpath%
+rd /s /q %distpath%\%dist%-%version%
 goto :eof
 
 :publish
-set distpath="C:\Users\Administrador\cli\op\dist\pyinstaller"
 set drive="G:\Meu Drive"
 set mtcliws="C:\Users\Administrador\cli\mtcli-ws\mtcli-ws\BIN"
 copy %distpath%\%dist%-%version%.zip %mtcliws%\%dist%.zip
