@@ -1,4 +1,4 @@
-"""Comando para calcular o horário das barras."""
+"""Comando para calcular o horário da barra."""
 
 import click
 
@@ -9,7 +9,7 @@ import click
 @click.option("--horario-abertura", "-ha", type=float, default=9)
 @click.option("--barra-inicial", "-bi", type=int, default=1)
 def h(bar, period, horario_abertura, barra_inicial):
-    """Calcula o horário de fechamento da barra."""
+    """Calcula o horário da barra."""
     minutos_barra = 5
     if period.upper() == "M3":
         minutos_barra = 3

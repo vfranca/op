@@ -9,7 +9,7 @@ import click
 @click.argument("prejuizo", type=float)
 @click.option("--operacoes", "-o", type=int, default=10, help="Quantidade de operacoes")
 def em(taxa_acerto, lucro, prejuizo, operacoes):
-    """Calcula expectativa matematica do trade system."""
+    """Calcula a expectativa matematica."""
     lucro_medio = (taxa_acerto / 100 * lucro) - ((100 - taxa_acerto) / 100 * prejuizo)
     lucro_total = lucro_medio * operacoes
     click.echo("operacoes %i" % operacoes)
